@@ -1,0 +1,380 @@
+/*****************************************************************************************************
+**************************************GENERAL STYLE***********************************************
+*****************************************************************************************************/
+:root {
+    --items-background-color: rgb(255, 255, 255, 0.1);
+    --hover-items-background-color: rgb(255, 255, 255, 0.2);
+    --body-background-color: rgb(20, 20, 20);
+}
+
+* {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: gainsboro;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    background-color: var(--body-background-color);
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+/***************************************Scrollbar Style**********************************************/
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.478);
+    border-radius: 10px;
+}
+
+/*****************************************************************************************************
+******************************************NAV STYLE***********************************************
+*****************************************************************************************************/
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    margin: 0 1%;
+    font-size: medium;
+}
+
+nav #logo {
+    background-color: var(--body-background-color);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 70px;
+    width: 16%;
+    z-index: 1;
+}
+
+#three-lines {
+    width: 25px;
+    height: 25px;
+    /* para dar espacio entre el texto y el borde de la caja */
+    padding: .5em;
+    /* para que el boton se vea redondeado */
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#three-lines:hover {
+    background-color: var(--hover-items-background-color);
+}
+
+#three-lines span {
+    display: block;
+    width: 20px;
+    height: 1.2px;
+    background-color: white;
+    /* para dar margen entre los span */
+    margin-top: 4px;
+    margin-left: 2px;
+}
+
+#youtube-logo {
+    width: 50%;
+    height: 100%;
+}
+
+nav #icons-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: inherit;
+    padding: 1%;
+}
+
+nav #icons-container #icons {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+nav #icons-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 3%;
+    margin-right: 5%;
+}
+
+nav #icons-container a:hover {
+    background-color: var(--hover-items-background-color);
+}
+
+nav #icons-container a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 5%;
+}
+
+nav #icons-container hr {
+    width: 100%;
+    border: 0.5px inset var(--items-background-color);
+}
+
+nav #icons-container #footer {
+    padding: 2% 4%;
+    line-height: 23px;
+}
+
+#icons-container ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+#icons-container #icons:hover::-webkit-scrollbar-thumb {
+    background-color: var(--hover-items-background-color);
+}
+
+/*****************************************************************************************************
+**************************************MAIN STYLE***********************************************
+*****************************************************************************************************/
+
+main {
+    margin: 0 auto;
+    width: 82%;
+    height: 100%;
+    display: flex;
+}
+
+/*************************************HEADER STYLE**********************************************/
+#header {
+    background-color: var(--body-background-color);
+    width: 80%;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#center-bar {
+    display: flex;
+    align-items: center;
+    width: 55%;
+}
+
+#search-bar {
+    display: flex;
+    border: 2px solid var(--items-background-color);
+    border-radius: 30px;
+    width: 100%;
+}
+
+#search-bar input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: large;
+    margin-left: 3%;
+}
+
+#search-bar input:focus-within {
+    outline: none;
+    border: 1px solid blue;
+}
+
+#search-bar button {
+    background-color: var(--items-background-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+#search-bar button img {
+    width: 50%;
+    height: 90%;
+}
+
+#microphone {
+    width: 25px;
+    height: 25px;
+    /* para dar espacio entre el texto y el borde de la caja */
+    padding: .5em;
+    margin-left: .5em;
+    /* para que el boton se vea redondeado */
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--items-background-color);
+}
+
+#microphone:hover {
+    background-color: var(--hover-items-background-color);
+}
+
+#microphone-icon {
+    width: 100%;
+    height: 100%;
+}
+
+#rigth-bar {
+    display: flex;
+    width: 15%;
+    position: relative;
+    left: 15%;
+}
+
+.rigth-bar-buttons {
+    width: 32px;
+    height: 32px;
+    /* para dar espacio entre el texto y el borde de la caja */
+    padding: .5em;
+    /* para que el boton se vea redondeado */
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.rigth-bar-buttons:hover {
+    background-color: var(--hover-items-background-color);
+}
+
+.rigth-bar-icons {
+    width: 100%;
+    height: 100%;
+    margin: 0 10% 0 0;
+}
+
+#account-icon {
+    width: 36px;
+    height: 36px;
+    padding: .5em;
+}
+
+
+/*****************************************************************************************************
+**************************************PRINCIPAL STYLE***********************************************
+*****************************************************************************************************/
+#principal-container {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+#principal {
+    position: relative;
+    top: 70px;
+    padding: 1%;
+}
+
+/*************************************BUTTONS STYLE**********************************************/
+#button-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#button-section a {
+    text-decoration: none;
+    background-color: var(--items-background-color);
+    border-radius: 15%;
+    padding: 1%;
+}
+
+#button-section a:hover {
+    background-color: var(--hover-items-background-color);
+}
+
+#button-section a p {
+    margin: 0;
+}
+
+#right-arrow {
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to left, var(--body-background-color) 70%, transparent);
+    width: 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#right-arrow button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+#right-arrow button img {
+    width: 50%;
+    height: 50%;
+    padding: 12px 0;
+}
+
+/*************************************VIDEOS STYLE**********************************************/
+
+#video-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#video-section div {
+    padding: 2% 0 2% 0;
+}
+
+#video-section div video {
+    width: 385px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+#video-section div a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.video-img {
+    width: 36px;
+    height: 36px;
+    margin: 3% 3% 0 0;
+}
+
+h3 {
+    margin: 3% 0 5% 0;
+}
+
+h4 {
+    margin: 0 0 0;
+    font-weight: lighter;
+}
+
+#principal ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+#principal div:hover::-webkit-scrollbar-thumb {
+    background-color: var(--hover-items-background-color);
+}
+
+/*****************************************************************************************************
+**************************************MEDIA QUERIES***********************************************
+*****************************************************************************************************/
+@media (min-width: 600px) and (max-width: 1000px) {
+    main {}
+}
+
+@media (min-width: 1001px) {
+    main {}
+}
